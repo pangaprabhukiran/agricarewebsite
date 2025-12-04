@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AgriCare – Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-container">
+    <h2>AgriCare Login</h2>
+
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="password" id="password" placeholder="Enter Password">
+
+    <button onclick="login()">Login</button>
+
+    <p id="errorMsg"></p>
+</div>
+
+<script src="login.js"></script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AgriCare – AI Plant Disease Detector</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- TensorFlow + Teachable Machine -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image"></script>
+</head>
+
+<body>
+
+<h1>🌱 AgriCare – AI Plant Disease Detection</h1>
+
+<!-- CAMERA SECTION -->
+<h2>📸 Capture Leaf Image</h2>
+<video id="cameraView" autoplay></video><br>
+<button onclick="openCamera()">Open Camera</button>
+<button onclick="predict()">Detect Disease</button>
+
+<p id="predictionResult"></p>
+
+<!-- REMEDY SECTION -->
+<div id="remedyBox"></div>
+
+<!-- TEXT INPUT -->
+<h2>⌨️ Text Input</h2>
+<input type="text" id="textInput" placeholder="Type your question...">
+<button onclick="submitText()">Submit</button>
+<p id="textOutput"></p>
+
+<!-- VOICE INPUT -->
+<h2>🎤 Voice Input</h2>
+<button onclick="startVoice()">Speak</button>
+<p id="voiceOutput"></p>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AgriCare – Upload Leaf Photo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image"></script>
+</head>
+<body>
+
+<h1>🌿 Upload Leaf Image for AI Detection</h1>
+
+<input type="file" id="imageInput" accept="image/*" onchange="previewImage()">
+
+<br><br>
+<img id="preview" width="300" style="display:none; border:2px solid green; border-radius:10px;">
+
+<br><br>
+<button onclick="predict()">Detect Disease</button>
+
+<p id="predictionResult"></p>
+
+<div id="remedyBox"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+

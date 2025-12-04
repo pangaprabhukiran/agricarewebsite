@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AgriCare – Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>AgriCare Dashboard</h2>
+    <button onclick="logout()">Logout</button>
+</div>
+
+<div class="dashboard-container">
+    <h3>Welcome to AgriCare AI</h3>
+
+    <div class="card">
+        <h4>📸 AI Disease Detection</h4>
+        <p>Use camera to detect plant diseases.</p>
+        <a href="camera.html"><button>Open</button></a>
+    </div>
+
+    <div class="card">
+        <h4>📁 Disease Dataset</h4>
+        <p>View causes, symptoms & remedies.</p>
+        <a href="diseases.json" target="_blank"><button>Open</button></a>
+    </div>
+
+    <div class="card">
+        <h4>🎤 Voice Input Page</h4>
+        <p>Talk to your app using your voice.</p>
+        <a href="index.html#voice"><button>Open</button></a>
+    </div>
+</div>
+
+<script>
+if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "index.html";
+}
+
+function logout() {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
+<div class="card">
+    <h4>📤 Upload Leaf Image</h4>
+    <p>Upload a photo from your device for AI detection.</p>
+    <a href="upload.html"><button>Open</button></a>
+</div>
+
